@@ -10,10 +10,6 @@
       "football-platform-ui": [
         "dist/football-platform-ui/football-platform-ui",
         "dist/football-platform-ui"
-      ],
-      "trial": [
-        "dist/trial/trial",
-        "dist/trial"
       ]
     },
     "noImplicitOverride": true,

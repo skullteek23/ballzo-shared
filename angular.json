@@ -33,37 +33,6 @@
           }
         }
       }
-    },
-    "trial": {
-      "projectType": "library",
-      "root": "projects/trial",
-      "sourceRoot": "projects/trial/src",
-      "prefix": "lib",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:ng-packagr",
-          "options": {
-            "project": "projects/trial/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "projects/trial/tsconfig.lib.prod.json"
-            },
-            "development": {
-              "tsConfig": "projects/trial/tsconfig.lib.json"
-            }
-          },
-          "defaultConfiguration": "production"
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/trial/src/test.ts",
-            "tsConfig": "projects/trial/tsconfig.spec.json",
-            "karmaConfig": "projects/trial/karma.conf.js"
-          }
-        }
-      }
     }
   },
   "defaultProject": "football-platform-ui"
