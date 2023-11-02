@@ -14,3 +14,47 @@ export class BackgroundCSS {
   background: string = '';
   color: string = 'black';
 }
+
+export class SupportRequest {
+  subject: string = '';
+  description: string = '';
+  uid: string = '';
+  screenshots: string[] = [];
+  createdAt: number = new Date().getTime();
+}
+
+/**
+ * DO NOT CHANGE THE ORDER OF THE ARRAY VALUES.
+ */
+export const PositionData = [
+  {
+    title: 'Manager',
+    subtitle: 'Game Coordinator / Slot Booker',
+  },
+  { title: 'Striker', subtitle: 'LW / ST / CF / RW' },
+  {
+    title: 'Midfielder',
+    subtitle: 'LM / CM / RM',
+  },
+  {
+    title: 'Defender',
+    subtitle: 'LB / CB / RB',
+  },
+  {
+    title: 'Goalkeeper',
+    subtitle: 'GK',
+  },
+]
+
+export class OrderConstants {
+  static readonly CANCELLATION_REASONS = [
+    'Conflict with another match',
+    'Unfavorable weather conditions',
+    'Injury or Health Issues',
+    'Insufficient Players',
+    'Ground/Match Quality',
+    'Others'
+  ];
+
+  static readonly REASON_PLACEHOLDER = 'Select a reason';
+}

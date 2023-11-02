@@ -56,3 +56,50 @@ export class SnackbarConstants {
   static readonly VERTICAL_POSITION = 'bottom'; // time in milliseconds
   static readonly DEFAULT_ACTION = 'OK';
 }
+
+export class AuthConstants {
+  static readonly LOGIN_CAPTCHA_PLACEHOLDER = 'recaptcha-container-login';
+  static readonly INDIAN_DIAL_CODE = '+91';
+}
+export class FormValidations {
+  static readonly displayName = {
+    min: 3,
+    max: 50,
+  };
+  static readonly phone = 10;
+  static readonly otp = 6;
+}
+
+export const LOCATION_API_URL = {
+  countryStateCityCommonUrl: 'https://api.countrystatecity.in/v1/countries/IN/states/',
+  locationApiHeader: 'X-CSCAPI-KEY',
+}
+
+export class Regex {
+  static readonly alphabeticAndSpace = /^[A-Za-z\s]+$/;
+  static readonly alphanumeric = /^[A-Za-z0-9]+$/;
+  static readonly alphanumericAndSpace = /^[A-Za-z0-9\s]+$/;
+  static readonly alphabeticWithNumbersAndSpecialCharacters =
+    /^[A-Za-z0-9\s\.\;\-]+$/;
+  static readonly alphanumericWithSpecialCharacters = /^[A-Za-z0-9\.\,\-]+$/;
+  static readonly alphanumericWithSpecialCharactersAndSpace =
+    /^[A-Za-z0-9\.\,\-\s]+$/;
+  static readonly customNumericMobileNumber = /^[1-9][0-9]{9}$/;
+  static readonly customNumericOtp = /^[0-9]{6}$/;
+}
+
+export enum TabLabel {
+  today = 0,
+  tomorrow = 1,
+  dayAfter = 2,
+}
+
+export class SupportConstants {
+  static readonly MAX_DESCRIPTION_LIMIT = 250;
+  static readonly MAX_SUBJECT_LIMIT = 50;
+  static readonly DEFAULT_PLACEHOLDER = 'Select File';
+  static readonly ALLOWED_FORMATS = ['jpg', 'jpeg', 'png'];
+  static readonly SUPPORT_REQUEST_ID_PREFIX = 'BA2023';
+  static readonly FILE_SEPARATOR = '-';
+  static readonly FILE_NAME = 'screenshot-support-';
+}
