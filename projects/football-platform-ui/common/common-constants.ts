@@ -9,7 +9,7 @@ export class Constants {
   static readonly PLACEHOLDER_ARRAY = [1, 2, 3, 4];
   static readonly DEFAULT_FACILITY_MAX_PLAYER_LIMIT = 22;
   static readonly DEFAULT_FACILITY_ALLOWED_PLAYER_LIMIT = Constants.DEFAULT_FACILITY_MAX_PLAYER_LIMIT;
-  static readonly DEFAULT_SLOT_PRICE = 50;
+  static readonly DEFAULT_SLOT_PRICE = 60;
   static readonly FILE_NAME_SEPARATOR = '-';
   static readonly DATE_TIME_FORMATS = {
     format_1: 'dd EEE', // 8 Sat
