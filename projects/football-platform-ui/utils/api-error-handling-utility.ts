@@ -1,5 +1,5 @@
 import { ApiMessages, AuthMessages, CommonMessages } from '@ballzo-ui/core/common';
-import { CloudFnErrorCode, IApiError } from '@ballzo-ui/core/user';
+import { CloudFnErrorCode, CloudStorageErrorCode, IApiError } from '@ballzo-ui/core/user';
 
 /**
  * Returns the error message from the auth error
@@ -141,7 +141,7 @@ export function getStorageError(error: any) {
   const { code } = JSON.parse(JSON.stringify(error));
   if (code) {
     const stripCode = code.replace('storage/', '');
-    switch (stripCode as string) {
+    switch (stripCode as CloudStorageErrorCode) {
       case 'bucket-not-found':
         return ApiMessages.error.notFound;
       case 'invalid-argument':
