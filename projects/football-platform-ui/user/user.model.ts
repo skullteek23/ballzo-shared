@@ -1,4 +1,4 @@
-import { Constants } from "football-platform-ui-shared/common"
+import { Constants } from "@ballzo-ui/core/common";
 
 /**
  * Defines the position of a player.
