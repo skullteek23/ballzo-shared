@@ -1,4 +1,4 @@
-import { Constants} from "football-platform-ui-shared/common";
+import { Constants } from "football-platform-ui-shared/core";
 
 export class ContactInfo {
   name: string = '';
