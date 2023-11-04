@@ -20,7 +20,13 @@ export function sanitizeFileName(fileName: string, separator: string): string {
   return fileName.replace(/\s+/g, separator);
 }
 
-export function dataURLtoFile(dataUrl: any, filename: string) {
+/**
+ * Converts base64 to file
+ * @param dataUrl
+ * @param filename
+ * @returns {File}
+ */
+export function dataURLtoFile(dataUrl: any, filename: string): File {
   var arr = dataUrl.split(','),
     mime = arr[0].match(/:(.*?);/)[1],
     bstr = atob(arr[arr.length - 1]),
