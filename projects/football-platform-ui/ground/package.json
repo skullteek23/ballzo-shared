@@ -1,8 +1,9 @@
 {
-    "ngPackage": {
-      "lib": {
-        "entryFile": "public-api.ts"
-      }
-    },
-    "peerDependencies": {}
-  }
+  "ngPackage": {
+    "lib": {
+      "entryFile": "public-api.ts"
+    }
+  },
+  "peerDependencies": {},
+  "type": "commonjs"
+}
