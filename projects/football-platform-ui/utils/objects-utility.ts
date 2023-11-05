@@ -1,5 +1,3 @@
-import { QueryDocumentSnapshot } from "@angular/fire/firestore";
-
 /**
  * Check if the value is an enum key
  * @param value
@@ -70,11 +68,11 @@ export function convertObjectToFirestoreData<T>(obj: T): any {
  * @param response
  * @returns
  */
-export function combineArrayDataWithId(response: QueryDocumentSnapshot[]): any[] {
+export function combineArrayDataWithId(response: any[]): any[] {
   if (!response?.length) {
     return [];
   }
-  return response.map((resp: QueryDocumentSnapshot) => {
+  return response.map((resp: any) => {
     const data = resp.data();
     if (resp.exists() && data) {
       return { ...data, id: resp.id };
@@ -119,13 +117,13 @@ export function getValueByIndex(enumType: any, index: number): any | undefined {
 
 /**
  * Compares argument value with object key value
- * @param obj 
- * @param comparableValue 
- * @param key 
- * @returns 
+ * @param obj
+ * @param comparableValue
+ * @param key
+ * @returns
  */
 export function compareFunction(obj: any, comparableValue: any, key: any) {
-  if(obj.hasOwnProperty(key)) {
+  if (obj.hasOwnProperty(key)) {
     return obj[key] === comparableValue;
   }
   return obj[key] !== comparableValue;

@@ -37,6 +37,28 @@ export class Constants {
   static readonly DEFAULT_IMG = 'assets/images/placeholder.png';
   static readonly PLUS_SIGN = '+';
   static readonly MINUS_SIGN = '-';
+  static readonly BOOKING_CANCELLATION_REASONS = [
+    'Conflict with another match',
+    'Unfavorable weather conditions',
+    'Injury or Health Issues',
+    'Insufficient Players',
+    'Ground/Match Quality',
+    'Others'
+  ];
+  static readonly REASON_PLACEHOLDER = 'Select a reason';
+  static readonly LOCATION_API_URL = {
+    countryStateCityCommonUrl: 'https://api.countrystatecity.in/v1/countries/IN/states/',
+    locationApiHeader: 'X-CSCAPI-KEY',
+  }
+  static readonly LOGIN_CAPTCHA_PLACEHOLDER = 'recaptcha-container-login';
+  static readonly INDIAN_DIAL_CODE = '+91';
+  static readonly MAX_DESCRIPTION_LIMIT = 250;
+  static readonly MAX_SUBJECT_LIMIT = 50;
+  static readonly DEFAULT_PLACEHOLDER = 'Select File';
+  static readonly ALLOWED_FORMATS = ['jpg', 'jpeg', 'png'];
+  static readonly SUPPORT_REQUEST_ID_PREFIX = 'BA2023';
+  static readonly FILE_SEPARATOR = '-';
+  static readonly FILE_NAME = 'screenshot-support-';
 }
 
 export class LocalStorageProperties {
@@ -44,35 +66,11 @@ export class LocalStorageProperties {
   static readonly USER_UID = 'uid';
 }
 
-export class SessionStorageProperties {
-  static readonly REDIRECT_URL = 'redirectUrl';
-  static readonly USER_POSITION_SELECTION = 'userPositionSelection';
-  static readonly USER_GROUND_SELECTION = 'userGroundSelection';
-}
-
 export class SnackbarConstants {
   static readonly AUTO_HIDE = 3000; // time in milliseconds
   static readonly HORIZONTAL_POSITION = 'center'; // time in milliseconds
   static readonly VERTICAL_POSITION = 'bottom'; // time in milliseconds
   static readonly DEFAULT_ACTION = 'OK';
-}
-
-export class AuthConstants {
-  static readonly LOGIN_CAPTCHA_PLACEHOLDER = 'recaptcha-container-login';
-  static readonly INDIAN_DIAL_CODE = '+91';
-}
-export class FormValidations {
-  static readonly displayName = {
-    min: 3,
-    max: 50,
-  };
-  static readonly phone = 10;
-  static readonly otp = 6;
-}
-
-export const LOCATION_API_URL = {
-  countryStateCityCommonUrl: 'https://api.countrystatecity.in/v1/countries/IN/states/',
-  locationApiHeader: 'X-CSCAPI-KEY',
 }
 
 export class Regex {
@@ -92,14 +90,4 @@ export enum TabLabel {
   today = 0,
   tomorrow = 1,
   dayAfter = 2,
-}
-
-export class SupportConstants {
-  static readonly MAX_DESCRIPTION_LIMIT = 250;
-  static readonly MAX_SUBJECT_LIMIT = 50;
-  static readonly DEFAULT_PLACEHOLDER = 'Select File';
-  static readonly ALLOWED_FORMATS = ['jpg', 'jpeg', 'png'];
-  static readonly SUPPORT_REQUEST_ID_PREFIX = 'BA2023';
-  static readonly FILE_SEPARATOR = '-';
-  static readonly FILE_NAME = 'screenshot-support-';
 }

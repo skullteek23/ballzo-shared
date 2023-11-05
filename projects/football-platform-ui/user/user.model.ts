@@ -1,8 +1,4 @@
 import { Constants } from "@ballzo-ui/core/common";
-import { ConfirmationResult, User } from '@angular/fire/auth';
-import { StorageErrorCode } from '@angular/fire/storage';
-import { FirebaseError } from 'firebase/app';
-import { FunctionsErrorCode } from 'firebase/functions';
 
 /**
  * Defines the position of a player.
@@ -57,15 +53,3 @@ export class PlayerStats {
   goals: number = 0;
   wins: number = 0;
 }
-
-
-
-// Interfaces
-export type IUser = User | null;
-export type IConfirmationResult = ConfirmationResult | null;
-
-export interface IApiError extends FirebaseError { }
-export type CloudFnErrorCode = FunctionsErrorCode;
-export type CloudStorageErrorCode = StorageErrorCode;
-export type IUserRole = { user: IUser, role: string };
-
