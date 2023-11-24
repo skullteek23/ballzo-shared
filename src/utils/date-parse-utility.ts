@@ -1,4 +1,4 @@
-import { TabLabel } from "@ballzo-ui/core/common";
+import { TabLabel } from "../common/common-constants";
 
 export class DateParseUtility {
 

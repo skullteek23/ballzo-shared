@@ -7,5 +7,5 @@
     "outDir": "./dist/lib/es6",
     "moduleResolution": "node"
   },
-  "include": ["football-platform-ui/**/*", "football-platform-ui/user/user.ts", "football-platform-ui/index.ts"]
+  "include": ["src/**/*", "src/index.ts"]
 }
