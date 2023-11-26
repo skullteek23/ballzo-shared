@@ -5,7 +5,9 @@
   "author": "Ballzo India",
   "license": "MIT",
   "scripts": {
-    "build": "tsc && tsc --build tsconfig.es5.json"
+    "compile": "tsc && tsc --build tsconfig.es5.json",
+    "deploy": "cd dist && npm publish",
+    "build": "npm run compile && npm run deploy"
   },
   "private": true,
   "devDependencies": {
