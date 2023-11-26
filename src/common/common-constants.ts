@@ -59,6 +59,10 @@ export class Constants {
   static readonly SUPPORT_REQUEST_ID_PREFIX = 'BA2023';
   static readonly FILE_SEPARATOR = '-';
   static readonly FILE_NAME = 'screenshot-support-';
+  static readonly WALLET_TRANSACTION: {
+    credit: 'Received refund for',
+    debit: 'Paid for',
+  }
 }
 
 export class LocalStorageProperties {
