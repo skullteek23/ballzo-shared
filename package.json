@@ -5,7 +5,7 @@
   "author": "Ballzo India",
   "license": "MIT",
   "scripts": {
-    "compile": "tsc && tsc --build tsconfig.es5.json"
+    "build": "tsc && tsc --build tsconfig.es5.json"
   },
   "private": true,
   "devDependencies": {
