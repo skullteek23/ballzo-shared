@@ -1,38 +1,11 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
-  "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "paths": {
-      "football-platform-ui": [
-        "dist/football-platform-ui/football-platform-ui",
-        "dist/football-platform-ui"
-      ]
-    },
-    "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "sourceMap": true,
-    "declaration": false,
-    "downlevelIteration": true,
-    "experimentalDecorators": true,
-    "moduleResolution": "node",
-    "importHelpers": true,
-    "target": "es2017",
-    "module": "es2020",
-    "lib": [
-      "es2020",
-      "dom"
-    ]
+    "module": "ES6",
+    "target": "ES5",
+    "lib": ["ES2020", "DOM"],
+    "declaration": true,
+    "outDir": "./dist/lib/es6",
+    "moduleResolution": "node"
   },
-  "angularCompilerOptions": {
-    "enableI18nLegacyMessageIdFormat": false,
-    "strictInjectionParameters": true,
-    "strictInputAccessModifiers": true,
-    "strictTemplates": true
-  }
+  "include": ["src/**/*", "src/index.ts"]
 }

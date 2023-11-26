@@ -1,4 +1,4 @@
-import { Constants } from "@ballzo-ui/core/common";
+import { Constants } from "../common/common-constants";
 
 /**
  * Defines the position of a player.

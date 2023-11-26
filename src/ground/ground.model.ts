@@ -1,4 +1,4 @@
-import { Constants } from "@ballzo-ui/core/common";
+import { Constants } from "../common/common-constants";
 
 export class ContactInfo {
   name: string = '';
