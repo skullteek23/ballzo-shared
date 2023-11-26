@@ -1,4 +1,5 @@
 export * from "./common/common-constants";
+export * from "./common/common.model";
 export * from "./ground/ground.model";
 export * from "./location/location.model";
 export * from "./transaction/transaction.model";
