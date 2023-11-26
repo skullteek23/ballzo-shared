@@ -7,3 +7,4 @@ export * from "./utils/date-parse-utility";
 export * from "./utils/file-utility";
 export * from "./utils/objects-utility";
 export * from "./utils/string-utility";
+export * from "./utils/array-sorting-utility";
