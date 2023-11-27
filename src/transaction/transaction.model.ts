@@ -4,7 +4,8 @@ export class Booking {
   orderIds: string[] = [];
   groundId: string = '';
   slotId: string = '';
-  timestamp: number = new Date().getTime();
+  bookedAt: number = new Date().getTime();
+  slotTimestamp: number = 0;
   lastUpdated: number = new Date().getTime();
   facilityId: string = '';
   spots: number = 1;
