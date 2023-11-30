@@ -100,8 +100,8 @@ export class GroundSlot {
 }
 
 export class GroundPrice {
-  weekdays: number = 0;
-  weekends: number = 0;
+  bulk: number = 0;
+  single: number = 0;
 }
 
 export enum GroundStatus {
