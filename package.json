@@ -7,7 +7,7 @@
   "scripts": {
     "compile": "tsc && tsc --build tsconfig.es5.json",
     "deploy-main": "cd dist && npm publish",
-    "deploy": "npm run compile && npm run deploy"
+    "deploy": "npm run compile && npm run deploy-main"
   },
   "private": true,
   "devDependencies": {
