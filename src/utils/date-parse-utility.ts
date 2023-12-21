@@ -1,4 +1,4 @@
-import { TabLabel } from "../common/common-constants";
+import { Constants, TabLabel } from "../common/common-constants";
 
 export class DateParseUtility {
 
@@ -41,5 +41,31 @@ export class DateParseUtility {
 
     const formattedTime = `${formattedHours}:${minutes.toString().padStart(2, '0')} ${period}`;
     return formattedTime;
+  }
+
+  /**
+   * Returns relative time for a given timestamp in milliseconds
+   * @param {number} timestamp
+   * @returns
+   */
+  static getTimeRelative(timestamp: number): TabLabel {
+    const timestampDate: Date = new Date(timestamp); // Convert timestamp to Date object
+    const currentDate: Date = new Date(); // Current date
+
+    // Set time to midnight to compare date only
+    timestampDate.setHours(0, 0, 0, 0);
+    currentDate.setHours(0, 0, 0, 0);
+
+    const difference: number = Math.floor((timestampDate.getTime() - currentDate.getTime()) / (Constants.ONE_DAY_IN_MILLISECONDS)); // Difference in days
+
+    if (difference === 0) {
+      return TabLabel.today;
+    } else if (difference === 1) {
+      return TabLabel.tomorrow;
+    } else if (difference === 2) {
+      return TabLabel.dayAfter;
+    } else {
+      return TabLabel.farAway;
+    }
   }
 }

@@ -22,6 +22,7 @@ export class Constants {
     format_1: '1.0-0', // 3.6 -> 4
   };
   static readonly SEVEN_MINUTES_IN_MILLISECONDS = 420000;
+  static readonly ONE_DAY_IN_MILLISECONDS = 86400000;
   static readonly THREE_DAYS_IN_MILLISECONDS = 259200000;
   static readonly ONE_HOUR_IN_MILLISECONDS = 3600000;
   static readonly TWELVE_HOURS_IN_MILLISECONDS = 43200000;
@@ -94,4 +95,5 @@ export enum TabLabel {
   today = 0,
   tomorrow = 1,
   dayAfter = 2,
+  farAway = 4
 }
