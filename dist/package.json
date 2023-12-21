@@ -1,6 +1,6 @@
 {
   "name": "@ballzo-ui/core",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Trying to use TS Lib in node js",
   "main": "lib/es5/index.js",
   "module": "lib/es6/index.js",
