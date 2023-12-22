@@ -40,7 +40,7 @@ export interface CheckoutRz {
   currency: string;
   name: string;
   order_id: string;
-  handler: () => Promise<any>;
+  handler: (response: any) => Promise<any>;
   description?: string;
   image?: string;
   partial_payment?: boolean;
