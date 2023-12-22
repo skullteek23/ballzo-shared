@@ -40,7 +40,7 @@ export interface CheckoutRz {
   currency: string;
   name: string;
   order_id: string;
-  callback_url: string; // for ex: https://ballzo.in/razorpay/callback
+  handler: () => Promise<any>;
   description?: string;
   image?: string;
   partial_payment?: boolean;
