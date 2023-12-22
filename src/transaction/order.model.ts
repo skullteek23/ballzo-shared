@@ -25,36 +25,6 @@ export enum OrderStatus {
 //   black = 1
 // }
 
-export class WalletTransaction {
-  amount: number = 0;
-  type: TransactionType = TransactionType.debit;
-  createdOn: number = new Date().getTime();
-  orderId: string = '';
-  uid: string = '';
-  transactionFor: string = ''; // notes for transaction entity
-
-  get _amount(): string {
-    if (this.amount !== undefined && this.amount !== null && Number(this.amount) >= 0) {
-      return this.type === TransactionType.credit ? Constants.PLUS_SIGN + this.amount : Constants.MINUS_SIGN + this.amount;
-    }
-    return Constants.NOT_AVAILABLE;
-  }
-
-  get _highlightClass(): string {
-    return this.type === TransactionType.credit ? 'green-highlight' : 'red-highlight';
-  }
-
-  get _description(): string {
-    let message: string = Constants.WALLET_TRANSACTION.debit;
-    if (this.type === TransactionType.credit) {
-      message = Constants.WALLET_TRANSACTION.credit;
-    }
-    message += ' ';
-    message += this.transactionFor;
-    return message;
-  }
-}
-
 export class OrderReturn {
   id: string = '';
   reason: string = '';
@@ -62,4 +32,79 @@ export class OrderReturn {
   returnCount: number = 0;
   timestamp: number = new Date().getTime();
   returnMode = 'ballzo-wallet';
+}
+
+export interface CheckoutRz {
+  key: string;
+  amount: number;
+  currency: string;
+  name: string;
+  order_id: string;
+  callback_url: string; // for ex: https://ballzo.in/razorpay/callback
+  description?: string;
+  image?: string;
+  partial_payment?: boolean;
+  prefill?: {
+    name?: string;
+    email?: string;
+    contact?: string;
+    method?: string;
+    partial_payment?: boolean;
+  },
+  notes?: any;
+  theme?: {
+    hide_topbar?: boolean;
+    color?: string;
+    backdrop_color?: string;
+  };
+  modal?: {
+    backdropclose?: boolean;
+    escape?: boolean;
+    handleback?: boolean;
+    confirm_close?: boolean;
+    ondismiss?: () => {};
+    animation?: boolean;
+  };
+  customer_id?: string;
+  timeout?: number;
+  remember_customer?: boolean;
+  send_sms_hash?: boolean;
+  allow_rotation?: boolean;
+  retry?: {
+    enabled?: boolean;
+  };
+}
+
+export interface OrderRz {
+  amount: number;
+  amount_due: number;
+  amount_paid: number;
+  attempts: number;
+  created_at: number;
+  currency: string;
+  entity: string;
+  id: string;
+  status: string;
+  razorpay_payment_id: string;
+  notes?: any;
+  offers?: any[];
+  offer_id?: string;
+  receipt?: string;
+  description?: string;
+}
+
+export class OrderRefundRz {
+  id: string;
+  entity: string;
+  amount: number;
+  currency: string;
+  payment_id: string;
+  notes: any[];
+  receipt: string;
+  acquirer_data: any;
+  created_at: number;
+  batch_id: string;
+  status: string;
+  speed_processed: string;
+  speed_requested: string;
 }
