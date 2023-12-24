@@ -1,29 +1,4 @@
-import { Constants } from "../common/common-constants";
-import { TransactionType } from "./transaction.model";
-
-export class Order {
-  id: string = '';
-  status: OrderStatus = OrderStatus.confirmed;
-  amount: number = 0;
-  ref: any = {};
-  uid: string = '';
-  timestamp: number = new Date().getTime();
-
-  totalPrice(count: number, unitPrice: number): number {
-    return Number(count) * Number(unitPrice);
-  }
-}
-
-export enum OrderStatus {
-  confirmed = 'confirmed',
-  finished = 'finished',
-  returned = 'returned',
-}
-
-// export enum BookingSide {
-//   white = 0,
-//   black = 1
-// }
+import { IMap } from "../common/common.model";
 
 export class OrderReturn {
   id: string = '';
@@ -75,26 +50,23 @@ export interface CheckoutRz {
   };
 }
 
-export interface OrderRz {
-  id: string;
-  entity: string;
-  amount: number | string;
-  amount_paid: number;
-  amount_due: number,
-  currency: string;
-  receipt?: string;
-  offer_id?: string | null;
-  offers?: { [key: string]: string };
-  status: 'created' | 'attempted' | 'paid';
-  attempts: number;
-  notes?: IMap<string | number>;
-  created_at: number;
+export class OrderRz {
+  id: string = '';
+  entity: string = '';
+  amount: number | string = 0;
+  amount_paid: number = 0;
+  amount_due: number = 0;
+  currency: string = 'INR';
+  receipt?: string = '';
+  offer_id?: string | null = '';
+  offers?: { [key: string]: string } = {};
+  status: 'created' | 'attempted' | 'paid' = 'created';
+  attempts: number = 0;
+  notes?: IMap<string | number> = {};
+  created_at: number = new Date().getTime();
+
+  get _amount() {
+    return Number(this.amount) * 100;
+  }
 }
 
-
-/**
- * Key-value pairs
- */
-export interface IMap<T> {
-  [key: string]: T | null;
-}

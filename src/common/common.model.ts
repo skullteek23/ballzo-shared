@@ -45,3 +45,10 @@ export const PositionData = [
     subtitle: 'GK',
   },
 ]
+
+/**
+ * Key-value pairs
+ */
+export interface IMap<T> {
+  [key: string]: T | null;
+}
