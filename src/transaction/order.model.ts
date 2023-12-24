@@ -76,35 +76,25 @@ export interface CheckoutRz {
 }
 
 export interface OrderRz {
-  amount: number;
-  amount_due: number;
-  amount_paid: number;
-  attempts: number;
-  created_at: number;
-  currency: string;
-  entity: string;
   id: string;
-  status: string;
-  razorpay_payment_id: string;
-  notes?: any;
-  offers?: any[];
-  offer_id?: string;
+  entity: string;
+  amount: number | string;
+  amount_paid: number;
+  amount_due: number,
+  currency: string;
   receipt?: string;
-  description?: string;
+  offer_id?: string | null;
+  offers?: { [key: string]: string };
+  status: 'created' | 'attempted' | 'paid';
+  attempts: number;
+  notes?: IMap<string | number>;
+  created_at: number;
 }
 
-export class OrderRefundRz {
-  id: string;
-  entity: string;
-  amount: number;
-  currency: string;
-  payment_id: string;
-  notes: any[];
-  receipt: string;
-  acquirer_data: any;
-  created_at: number;
-  batch_id: string;
-  status: string;
-  speed_processed: string;
-  speed_requested: string;
+
+/**
+ * Key-value pairs
+ */
+export interface IMap<T> {
+  [key: string]: T | null;
 }
