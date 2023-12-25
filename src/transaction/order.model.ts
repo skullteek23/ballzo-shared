@@ -65,7 +65,7 @@ export class OrderRz {
   offers?: { [key: string]: string } = {};
   status: 'created' | 'attempted' | 'paid' = 'created';
   attempts: number = 0;
-  notes?: IMap<string | number> = {};
+  notes?: Partial<IOrderNotes> = {};
   created_at: number = new Date().getTime();
 
   get _amount() {
@@ -84,4 +84,9 @@ export class CancellationBehavior {
   _resetCount() {
     this.count = 0;
   }
+}
+
+export interface IOrderNotes {
+  cancelled: boolean;
+  cancellationReason: string;
 }
