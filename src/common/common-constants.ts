@@ -64,6 +64,7 @@ export class Constants {
     credit: 'Received refund for',
     debit: 'Paid for',
   }
+  static readonly CANCELLATIONS_ALLOWED_IN_WEEK = 3;
 }
 
 export class LocalStorageProperties {

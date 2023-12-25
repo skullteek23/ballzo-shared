@@ -1,3 +1,4 @@
+import { Constants } from "../common/common-constants";
 import { IMap } from "../common/common.model";
 
 export class OrderReturn {
@@ -72,3 +73,15 @@ export class OrderRz {
   }
 }
 
+export class CancellationBehavior {
+  lastCancellationTimestamp: number = 0;
+  count: number = 0;
+
+  _updateCancellationCount() {
+    this.count++;
+  }
+
+  _resetCount() {
+    this.count = 0;
+  }
+}
