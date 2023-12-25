@@ -52,6 +52,8 @@ export interface CheckoutRz {
 
 export class OrderRz {
   id: string = '';
+  bookingId: string = '';
+  uid: string = '';
   entity: string = '';
   amount: number | string = 0;
   amount_paid: number = 0;
