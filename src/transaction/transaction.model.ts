@@ -3,7 +3,7 @@ import { Constants } from "../common/common-constants";
 export class Booking {
   id: string = '';
   uid: string = '';
-  orderIds: string[] = [];
+  orderId: string = '';
   groundId: string = '';
   slotId: string = '';
   bookedAt: number = new Date().getTime();

@@ -66,7 +66,7 @@ export class OrderRz {
   created_at: number = new Date().getTime();
 
   get _amount() {
-    return Number(this.amount) * 100;
+    return Number(this.amount) / 100;
   }
 }
 
