@@ -71,6 +71,10 @@ export class OrderRz {
   get _amount() {
     return Number(this.amount) / 100;
   }
+
+  get _created_at() {
+    return this.created_at * 1000;
+  }
 }
 
 export class CancellationBehavior {
