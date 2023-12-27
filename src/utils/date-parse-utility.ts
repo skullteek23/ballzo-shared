@@ -58,7 +58,9 @@ export class DateParseUtility {
 
     const difference: number = Math.floor((timestampDate.getTime() - currentDate.getTime()) / (Constants.ONE_DAY_IN_MILLISECONDS)); // Difference in days
 
-    if (difference === 0) {
+    if (timestamp < new Date().getTime()) {
+      return TabLabel.past;
+    } else if (difference === 0) {
       return TabLabel.today;
     } else if (difference === 1) {
       return TabLabel.tomorrow;
