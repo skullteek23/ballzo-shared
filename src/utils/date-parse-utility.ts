@@ -64,6 +64,8 @@ export class DateParseUtility {
       return TabLabel.tomorrow;
     } else if (difference === 2) {
       return TabLabel.dayAfter;
+    } else if (difference < 0) {
+      return TabLabel.past;
     } else {
       return TabLabel.farAway;
     }

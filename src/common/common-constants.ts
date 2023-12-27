@@ -93,8 +93,9 @@ export class Regex {
 }
 
 export enum TabLabel {
+  past = -1,
   today = 0,
   tomorrow = 1,
   dayAfter = 2,
-  farAway = 4
+  farAway = 4,
 }
